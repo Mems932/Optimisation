@@ -1,0 +1,40 @@
+GET http://localhost:8000/api/events/
+
+
+###
+POST http://localhost:8000/api/events/
+Content-Type: application/json
+
+{
+    "name": "Conférence",
+    "location": "Paris",
+    "date": "2024-11-20",
+    "description": "Conference tech",
+    "max_participants": 2
+}
+
+
+###
+PUT http://localhost:8000/api/events/2/
+Content-Type: application/json
+
+{
+    "name": "pas une fete",
+    "location": "pas ici",
+    "date": "2024-11-20",
+    "description": "sniff c'est plus la fete"
+}
+
+###
+DELETE http://localhost:8000/api/events/5/
+
+
+###
+POST http://localhost:8000/api/participants/
+Content-Type: application/json
+
+{
+    "event": 9,
+    "name": "Part 1",
+    "email": "bob@bob.bob"
+}
